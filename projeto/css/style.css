@@ -1,7 +1,7 @@
 html, body {
     margin: 0;
     padding: 0;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 body{
@@ -32,24 +32,44 @@ header .wrapper {
 
 }
 #logo h1 spam {
-    color: #F19E39;
+    color: #ffc400;
 }
 
 #logo h1 {
     margin: 0;
-    color: aliceblue;
+    color: rgb(255, 255, 255);
 }
-nav {
-    height: 50px;
-    
-    
-}
+
 
 nav ul {
     display: flex;
     list-style-type:none ;
     padding: 0;
-    gap: 20px;
+    
     color: #Fff;
     font-size: 20px;
 }
+.active:hover{
+    border-bottom: 5px solid #ffc400 ;
+}
+.active {
+    border-bottom: 5px solid #ffc400 ;
+    
+}
+header nav ul li a {
+    color: #a3a2a2;
+    text-decoration:none;
+    padding: 30px 20px;
+}
+
+header nav ul li a:hover {
+    color: #bdbcbc;
+    border-bottom:5px solid #694f00a8;
+   
+}
+
+
+main {
+    color: #Fff;
+}
+
