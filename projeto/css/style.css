@@ -27,12 +27,16 @@ header .wrapper {
 }
 #logo {
     width: 150px;
-    display: flex;
-    gap: 15px;
 
 }
+
+#logo a {
+    display: flex;
+    gap: 10px;
+    text-decoration: none;
+}
 #logo h1 spam {
-    color: #ffc400;
+    color: #F19E39;
 }
 
 #logo h1 {
@@ -50,14 +54,14 @@ nav ul {
     font-size: 20px;
 }
 .active:hover{
-    border-bottom: 5px solid #ffc400 ;
+    border-bottom: 5px solid #F19E39 ;
 }
 .active {
-    border-bottom: 5px solid #ffc400 ;
+    border-bottom: 5px solid #F19E39 ;
     
 }
 header nav ul li a {
-    color: #a3a2a2;
+    color: #ffffff;
     text-decoration:none;
     padding: 30px 20px;
 }
