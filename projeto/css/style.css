@@ -27,8 +27,12 @@ header .wrapper {
 }
 #logo {
     width: 150px;
+    display: flex;
+    gap: 15px;
 
-
+}
+#logo h1 spam {
+    color: #F19E39;
 }
 
 #logo h1 {
