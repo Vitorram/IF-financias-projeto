@@ -41,6 +41,15 @@ header .wrapper {
 }
 nav {
     height: 50px;
-    width: 450px;
-    background-color: rgb(88, 88, 88);
+    
+    
+}
+
+nav ul {
+    display: flex;
+    list-style-type:none ;
+    padding: 0;
+    gap: 20px;
+    color: #Fff;
+    font-size: 20px;
 }
