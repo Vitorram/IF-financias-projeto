@@ -112,4 +112,40 @@ tr:nth-child(1) {
 form {
     display: flex;
     flex-direction: column;
+    gap: 10px;
+    width: 50%;
+}
+fieldset {
+    border: 1px solid rgb(37, 37, 37);
+    border-radius: 20px;
+}
+
+fieldset:first-child{
+    display: flex;
+    flex-direction: column;
+}
+input[type=text],input[type=password],select,textarea{
+    padding: 3px 8px;
+    border-radius: 10px;
+    background-color: #2f302d;
+    border: none;
+    margin: 5px 0 10px 0;
+    color: #ffffff;
+    font-size: 16px;
+}
+select {
+ width: fit-content;    
+}
+
+input[type=submit]{
+    width: 50%;
+    background-color: #F19E39;
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+input[type=submite]:hover{
+    background-color: #66441a;
 }
