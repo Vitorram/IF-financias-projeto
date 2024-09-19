@@ -146,6 +146,7 @@ input[type=submit]{
     font-weight: bold;
     cursor: pointer;
 }
-input[type=submite]:hover{
-    background-color: #66441a;
-}
+input[type=submit]:hover{
+    
+    background-color: #704613;
+} 
