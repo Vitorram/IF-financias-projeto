@@ -30,6 +30,45 @@
         <main>
             <div class="wrapper">
                 <h1>Contatos</h1>
+
+                <form>
+                    <label for = "nome">Nome:</label>
+                    <input type="text" id="nome" name = "nome">
+                    <label for = "nome">Senha:</label>
+                    <input type="password" id="senha" name = "senha">
+                    <p>Em qual bolsa voçê tem mais investimentos? </p>
+                    <div>
+                        <input type="radio" id="Ibovespa" name = "bolsa" value="Ibovespa">
+                        <label for = "Ibovespa">IBOVESPA</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="nasdaq" name = "bolsa" value="nasdaq">
+                        <label for = "nasdaq">NASDAQ</label> 
+                    </div>
+                    <div>
+                        <input type="radio" id="Nyse" name = "bolsa" value="Nyse">
+                        <label for = "Nyse">NYSE</label>
+                    </div>
+                    <br>
+                    <div>
+                        <input type="checkbox" id="Newletter" name = "news" >
+                        <label for = "Newletter">Deseja receber nosso informativo?</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="terms" name = "terms" >
+                        <label for = "Newletter">aceita nossos termos de uso?</label>
+                    </div>
+                    <label for = "estados">qual seu estado?</label>
+                    <select id="estados" name="estados">
+                        <option>Sao Pauulo</option>
+                        <option>Rio de janeiro</option>
+                        <option>Minas Gerais</option>
+                    </select>
+                    
+                    <label for = "Newletter">digite seu comentario</label>
+                    <textarea id="comentario" name="comentario"></textarea>
+                <input type="submit" value="enviar">
+                </form>
             </div>
         </main>
         </body>
