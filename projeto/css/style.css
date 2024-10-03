@@ -150,3 +150,7 @@ input[type=submit]:hover{
     
     background-color: #704613;
 } 
+textarea {
+    width: 700px;
+    height: 300px;
+}
