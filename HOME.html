@@ -5,13 +5,30 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Document</title>
             <script>
-                var nome = 
+                var nome = "vitor"
+
+                const idAdmins= [1, 5, 10, 80,{rua: 'dos daos',numero: 87642}]
+                const campo = 'nome'
+
+                const user = {
+                    id: 10,
+                    nome: "vitor",
+                    nickname: "thigas",
+                    email: "vitor@gmail",
+                    altura: 1.80 ,
+                    'nome completo': 'gabriel santineli',
+                    idAdmins: [4,5,10,80],
+                    endereco: {
+                        rua: "Alameida Ra de Four",
+                        numero: "910"
+                    }
+                }
 
                 
 
 
-                
-                console.log(`Ola ${nome},seja bem vindo`)
+                console.log(`Ola ${user.nickname},seja bem vindo, seu codigo é ${idAdmins [4].numero}`)
+            
                 
             </script>
         </head>
