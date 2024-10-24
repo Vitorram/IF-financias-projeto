@@ -6,7 +6,9 @@
             <title>Document</title>
             <script>
                 var nome = "vitor"
-
+                //var pode ser redeclarado e gerar problemas
+                //let nao pode ser redeclarado
+                //cons nao pode ser redeclarado e nem valor trocado
                 const idAdmins= [1, 5, 10, 80,{rua: 'dos daos',numero: 87642}]
                 const campo = 'nome'
 
@@ -19,20 +21,22 @@
                     senha:"Tainha",
                     'nome completo': 'gabriel santineli',
                     idAdmins: [4,5,10,80],
-                    endereco: {
-                        rua: "Alameida Ra de Four",
-                        numero: "910"
-                    }
+                    endereco: 
+                   { rua: "So os mlk mais mais nao tem jeito",
+                        numero: "910"}
+                    
                 }
+                    
 
                 
-
+                
 
                 console.log(`Ola ${user.nickname},seja bem vindo`)
                 console.log(`Seu email é ${user.email}`)
                 console.log(`Sua senha é ${user.senha}`)
                 console.log(`seu id de adm é ${user.idAdmins[2]}`)
-                console.log(`seu endereço é: ${user.endereco}`)
+                console.log(`seu endereço é: ${user.endereco.rua} 
+numero:${user.endereco.numero}`)
 
             
 
