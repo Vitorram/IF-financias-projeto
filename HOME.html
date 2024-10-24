@@ -5,16 +5,34 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Document</title>
             <script>
-                var nome = "vitor"
+                //var nome = "vitor"
                 //var pode ser redeclarado e gerar problemas
                 //let nao pode ser redeclarado
                 //cons nao pode ser redeclarado e nem valor trocado
-                const idAdmins= [1, 5, 10, 80,{rua: 'dos daos',numero: 87642}]
-                const campo = 'nome'
+                //const idAdmins= [1, 5, 10, 80,{rua: 'dos daos',numero: 87642}]
+                //const campo = 'nome'
 
+
+                function nomeCompleto (nome, sobrenome){
+
+
+                    return `${nome} ${sobrenome}`
+                }
+                const nCompleto = function (nome, sobrenome){
+                return `${nome} ${sobrenome}`
+                
+                }
+
+                const nncompleto = (nome, sobrenome) => {
+                return `${nome} ${sobrenome}`
+                }
+
+               
+                
                 const user = {
                     id: 10,
-                    nome: "vitor",
+                    nome: "Di Dier",
+                    sobrenome: "Balotelli",
                     nickname: "thigas",
                     email: "vitor@gmail",
                     altura: 1.80 ,
@@ -23,15 +41,18 @@
                     idAdmins: [4,5,10,80],
                     endereco: 
                    { rua: "So os mlk mais mais nao tem jeito",
-                        numero: "910"}
-                    
+                        numero: "910" },
+                
+                        nomeComplete: (nome, sobrenome) => {
+                    return `${nome} ${sobrenome}`
+        
                 }
-                    
+            }
 
                 
                 
 
-                console.log(`Ola ${user.nickname},seja bem vindo`)
+                console.log(`Ola ${user.nomeComplete (user.nome, user.sobrenome)},seja bem vindo`)
                 console.log(`Seu email é ${user.email}`)
                 console.log(`Sua senha é ${user.senha}`)
                 console.log(`seu id de adm é ${user.idAdmins[2]}`)
@@ -39,7 +60,7 @@
 numero:${user.endereco.numero}`)
 
             
-
+                
             
                 
             </script>
@@ -68,7 +89,36 @@ numero:${user.endereco.numero}`)
         <main>
             <div class="wrapper">
                 <h1>Home</h1>
+                <input type="text" id="txtinput">
+
+                
+                <button onclick="mudar()">Pegar texto</button>
+            </div>
+            <div id = "resultado">
+
             </div>
         </main>
         </body>
+        <script>
+           
+            console.log("elemento logo: ")
+            console.log(logo)
+            //logo.innerHTML = '<p>Novo Logo <p>'
+            //console.log(logo.innerHTML)
+            logo.innerHTML += '<p>novo logo<p>'
+            var valor = 10
+            valor += 5
+            console.log (`${valor}`)
+
+
+            function mudaTexto (){
+                const txtinput = document.getElementById('txtinput')
+                const resultado = document.getElementById('resultado')
+
+                resultado.innerHTML = txtinput.value
+            }
+            
+            
+            
+        </script>
 </html>
