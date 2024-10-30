@@ -92,8 +92,19 @@ numero:${user.endereco.numero}`)
                 <input type="text" id="txtinput">
 
                 
-                <button onclick="mudar()">Pegar texto</button>
+                <button onclick="mudaTexto()">Pegar texto</button>
+                <br>
+
+                <input type="text" id="mudarcor">
+                <button onclick="mudarCor ()" > mudar cor </button>
+                <div id = "mudar" style="width: 100px; height: 100px;">
+         
+                </div>
+                
+
             </div>
+            
+
             <div id = "resultado">
 
             </div>
@@ -112,11 +123,38 @@ numero:${user.endereco.numero}`)
 
 
             function mudaTexto (){
-                const txtinput = document.getElementById('txtinput')
+                const mudarcor = document.getElementById('txtinput')
                 const resultado = document.getElementById('resultado')
+                resultado.innerHTML = `<p>${txtInput.value}</p>`
 
-                resultado.innerHTML = txtinput.value
             }
+            
+            function  mudarCor (){
+                const mudarcor = document.getElementById ('mudarcor')
+                const mudar = document.getElementById ('mudar')
+                mudar.style.backgroundColor = mudarcor.value
+            }
+            
+
+           
+            
+                mudar.style.background = "mudarcor()"
+
+           const Troca = () => {
+            const block = getElementById('mudar')
+            const input = getElementById('mudarcor')
+
+            block.style.background = input.value
+
+
+           }     
+               
+            
+          
+        
+    
+        
+             
             
             
             
