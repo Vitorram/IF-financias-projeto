@@ -6,14 +6,13 @@
 
       <input type="text" id="imagem">
       <label for="parte">Escolha a parte:</label>
-      
       <select id="parte">
         <option value="cab">Cabeça</option>
         <option value="corp">Corpo</option>
         <option value="per">Perna</option>
       </select>
       <button onclick="adicionarImagem()">Adicionar</button>
-      
+
       <div class="cab" style="width: 200px; height: 200px; background: #000;"></div>
       <br>
       <div class="corp" style="width: 200px; height: 200px; background: #000;"></div>
@@ -31,18 +30,18 @@
         // Adiciona a imagem à galeria selecionada
         const adicionarImagem = () => {
             const urlInput = document.querySelector("#imagem");
-            const parte = document.querySelector("#parte").value
-            const url = urlInput.value
+            const parte = document.querySelector("#parte").value;
+            const url = urlInput.value;
             
 
             if (parte=== "cab" ) {
-                adicionarNaGaleria(".cab", url, moverParaCabG)
+                adicionarNaGaleria(".cab", url, moverParaCabG);
                 contadorCab++;
             } else if (parte === "corp" ) {
-                adicionarNaGaleria(".corp", url, moverParaCorpG)
+                adicionarNaGaleria(".corp", url, moverParaCorpG);
                 contadorCorp++;
             } else if (parte === "per") {
-                adicionarNaGaleria(".per", url, moverParaPerG)
+                adicionarNaGaleria(".per", url, moverParaPerG);
                 contadorPer++;
             
 
@@ -54,25 +53,25 @@
      //console.log (valorTeste.toString()) 
 
         const adicionarNaGaleria = (classe, url, mover) => {
-            const galeria = document.querySelector(classe)
-            galeria.innerHTML += `<button onclick="('${url}')">
+            const galeria = document.querySelector(classe);
+            galeria.innerHTML += `<button onclick="${mover.name}('${url}')">
                                     <img src="${url}" alt="imagem" style="width: 50px; height: 50px;">
-                                </button>`
+                                </button>`;
         }
 
         
         const moverParaCabG = (url) => {
-            const cabG = document.querySelector(".cabG")
+            const cabG = document.querySelector(".cabG");
             cabG.innerHTML = `<img src="${url}" alt="cabeca" style="width: 100%; height: 100%;">`;
         }
 
         const moverParaCorpG = (url) => {
-            const corpoG = document.querySelector(".corpoG")
+            const corpoG = document.querySelector(".corpoG");
             corpoG.innerHTML = `<img src="${url}" alt="corpo" style="width: 100%; height: 100%;">`;
         }
 
         const moverParaPerG = (url) => {
-            const pernaG = document.querySelector(".pernaG")
+            const pernaG = document.querySelector(".pernaG");
             pernaG.innerHTML = `<img src="${url}" alt="perna" style="width: 100%; height: 100%;">`;
         }
     </script>
