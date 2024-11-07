@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+            
+        </head>
+        <link rel="stylesheet" href="./projeto/css/style.css">
+        <body>
+            <header>
+                <div class="wrapper">
+                    
+                        </a>
+                    </div>
+                  
+                </div>               
+            </header> 
+        <main>
+            <div class="wrapper">
+                <h1>Atividades java </h1>
+                <input type="text" id="txtinput">   
+                <button onclick="mudaTexto()">Pegar texto</button>
+
+                <br>
+                
+                <input type="text" id="mudarcor">
+                <button onclick="mudarCor ()" > mudar cor </button>
+                <div id = "mudar" style="width: 100px; height: 100px;">
+         
+                </div>
+                
+
+                <p>Valor 1: </p>
+                <input type="text" id="textInput1">
+                <P>Valor 2: </P>
+                <input type="text" id="textInput2">
+
+                <button onclick="caucular('+')">+</button>
+                <button onclick="caucular('-')">-</button>
+
+                <p> resultado: </p>
+                <input type="text" id="inputResult">
+                
+
+                <p>Cor:</p>
+                <input type="text" id="txtCor">
+                <button onclick="adicionarCor()">Adicionar Cor</button>
+
+                <p>Galeria:</p>
+                <div id="galeria" style="width: 200px; height: 200px; background: #d0d0d0;">
+                </div>
+
+                <p>Resultado:</p>
+                <div id="resultado" style="width: 200px; height: 200px; background: #6cb7f0; display: flex; justify-content: center; align-items: center;"></div>
+            </div>
+            </main>
+        </body>
+        <script>
+            //inner html, tudo que esta dentro do elemnto
+            // value, retorno
+            
+            function mudaTexto (){
+                const txtInput = document.getElementById('txtinput')
+                const resultado = document.getElementById('resultado')
+                resultado.innerHTML = `<p>${txtInput.value}</p>`
+
+            }
+            //atividade 1
+            // criar uma function
+            function  mudarCor (){
+                //atribuir a const mudarcor para o imput text
+                const mudarcor = document.getElementById ('mudarcor')
+                //atribuir para o bloco que muda a cor
+                const mudar = document.getElementById ('mudar')
+                //define oq ira ser mudado no bloco = retorno do bloco mudado
+                mudar.style.backgroundColor = mudarcor.value
+            }
+      
+
+            //atividade 2
+
+            const caucular = (operador) => {
+                const v1= parseInt (document.getElementById('textInput1').value)
+                const v2 = +document.getElementById('textInput2').value
+                const result = document.getElementById ('inputResult')
+                    if (operador === '+') {   
+                       return result.value =  v1 + v2
+
+                    }
+                    if (operador === '-') {   
+                       return result.value =  v1 - v2
+
+                    }
+                    alert ('op invalido ')
+            }
+          
+            //atividade 3
+            const adicionarCor = () => { // operador é igual '+' ou '-'
+        const txtCor = document.getElementById('txtCor')
+        const galeria = document.getElementById('galeria')
+
+        const cor = txtCor.value
+
+        galeria.innerHTML += `<button onclick="aplicarCor('${cor}')" style="width: 50px; height: 50px; background: ${cor}; margin: 10px;"></button>`
+    }
+
+    const aplicarCor = (cor) => { // operador é igual '+' ou '-'
+        const result = document.getElementById('resultado')
+
+        result.style.background = cor
+        result.innerHTML = `<p>${cor}</p>`
+
+    }
+            
+             
+            
+            
+            
+        </script>
+</html>

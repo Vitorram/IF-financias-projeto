@@ -27,76 +27,13 @@
                     </nav>
                 </div>               
             </header> 
-        <main>
+        <main>   
             <div class="wrapper">
-                <h1>Home</h1>
-                <input type="text" id="txtinput">   
-                <button onclick="mudaTexto()">Pegar texto</button>
-
-                <br>
-
-                <input type="text" id="mudarcor">
-                <button onclick="mudarCor ()" > mudar cor </button>
-                <div id = "mudar" style="width: 100px; height: 100px;">
-         
-                </div>
-                
-
-                <p>Valor 1: </p>
-                <input type="text" id="textInput1">
-                <P>Valor 2: </P>
-                <input type="text" id="textInput2">
-
-                <button onclick="caucular('+')">+</button>
-                <button onclick="caucular('-')">-</button>
-
-                <p> resultado: </p>
-                <input type="text" id="inputResult">
-           
-
+                <h1>HOME</h1>
+            </div>      
         </main>
         </body>
         <script>
-
-            function mudaTexto (){
-                const txtInput = document.getElementById('txtinput')
-                const resultado = document.getElementById('resultado')
-                resultado.innerHTML = `<p>${txtInput.value}</p>`
-
-            }
-            //atividade 1
-            function  mudarCor (){
-                const mudarcor = document.getElementById ('mudarcor')
-                const mudar = document.getElementById ('mudar')
-                mudar.style.backgroundColor = mudarcor.value
-            }
-      
-           //inner html, tudo que esta dentro do elemnto
-           // value, retorno
-
-            //atividade 2
-
-            const caucular = (operador) => {
-                const v1= parseInt (document.getElementById('textInput1').value)
-                const v2 = +document.getElementById('textInput2').value
-                const result = document.getElementById ('inputResult')
-                    if (operador === '+') {   
-                       return result.value =  v1 + v2
-
-                    }
-                    if (operador === '-') {   
-                       return result.value =  v1 - v2
-
-                    }
-                    alert ('op invalido ')
-            }
           
-        
-    
-        
-             
-            
-            
-            
         </script>
 </html>
