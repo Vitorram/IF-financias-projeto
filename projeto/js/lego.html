@@ -4,7 +4,7 @@
 
     <div id="lego" style="display: column; flex-wrap: wrap;">
 
-      <input type="text" id="imagemUrl">
+      <input type="text" id="imagem">
       <label for="parte">Escolha a parte:</label>
       <select id="parte">
         <option value="cab">Cabeça</option>
@@ -25,54 +25,53 @@
     </div>
 
     <script>
-    // Contadores para cada galeria
-        let contadorCab = 0;
-        let contadorCorp = 0;
-        let contadorPer = 0;
+    
 
         // Adiciona a imagem à galeria selecionada
         const adicionarImagem = () => {
-            const urlInput = document.querySelector("#imagemUrl");
-            const parteSelect = document.querySelector("#parte").value;
-            const url = urlInput.value;
+            const urlInput = document.querySelector("#imagem");
+            const parte = document.querySelector("#parte").value
+            const url = urlInput.value
             
 
-            if (parteSelect === "cab" && contadorCab < 5) {
-                adicionarNaGaleria(".cab", url, moverParaCabG);
+            if (parte=== "cab" ) {
+                adicionarNaGaleria(".cab", url, moverParaCabG)
                 contadorCab++;
-            } else if (parteSelect === "corp" && contadorCorp < 5) {
-                adicionarNaGaleria(".corp", url, moverParaCorpG);
+            } else if (parte === "corp" ) {
+                adicionarNaGaleria(".corp", url, moverParaCorpG)
                 contadorCorp++;
-            } else if (parteSelect === "per" && contadorPer < 5) {
-                adicionarNaGaleria(".per", url, moverParaPerG);
+            } else if (parte === "per") {
+                adicionarNaGaleria(".per", url, moverParaPerG)
                 contadorPer++;
             
 
-            urlInput.value = ""; // Limpa o campo de texto após adicionar
+            
         }
     }
 
-        // Função genérica para adicionar a imagem na galeria
-        const adicionarNaGaleria = (classe, url, moverFuncao) => {
-            const galeria = document.querySelector(classe);
-            galeria.innerHTML += `<button onclick="${moverFuncao.name}('${url}')">
+     //const valorTeste = 10
+     //console.log (valorTeste.toString()) 
+
+        const adicionarNaGaleria = (classe, url, mover) => {
+            const galeria = document.querySelector(classe)
+            galeria.innerHTML += `<button onclick="('${url}')">
                                     <img src="${url}" alt="imagem" style="width: 50px; height: 50px;">
-                                </button>`;
+                                </button>`
         }
 
-        // Move a imagem para o contêiner principal correspondente
+        
         const moverParaCabG = (url) => {
-            const cabG = document.querySelector(".cabG");
+            const cabG = document.querySelector(".cabG")
             cabG.innerHTML = `<img src="${url}" alt="cabeca" style="width: 100%; height: 100%;">`;
         }
 
         const moverParaCorpG = (url) => {
-            const corpoG = document.querySelector(".corpoG");
+            const corpoG = document.querySelector(".corpoG")
             corpoG.innerHTML = `<img src="${url}" alt="corpo" style="width: 100%; height: 100%;">`;
         }
 
         const moverParaPerG = (url) => {
-            const pernaG = document.querySelector(".pernaG");
+            const pernaG = document.querySelector(".pernaG")
             pernaG.innerHTML = `<img src="${url}" alt="perna" style="width: 100%; height: 100%;">`;
         }
     </script>
