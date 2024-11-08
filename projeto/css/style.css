@@ -137,7 +137,7 @@ select {
  width: fit-content;    
 }
 
-input[type=submit]{
+input[type=submit], button{
     width: 50%;
     background-color: #F19E39;
     border-radius: 20px;
@@ -146,7 +146,7 @@ input[type=submit]{
     font-weight: bold;
     cursor: pointer;
 }
-input[type=submit]:hover{
+input[type=submit]:hover, button:hover{
     
     background-color: #704613;
 } 
@@ -155,3 +155,47 @@ textarea {
     height: 300px;
 }
 
+.flex-bt{
+display: flex;
+justify-content: space-between;
+
+}
+.align-center {
+    align-items: center;
+}
+.modal{
+    background: #f19e3952;
+    position: absolute;
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    
+}
+ .modal main {
+    width: 700px;
+    height: 500px;
+    background: #F19E39;
+    border-radius: 20px;
+    padding: 20px;
+ }
+ .modal main header{
+    background: none;
+    height: auto;
+ }
+ .modal main h1{
+    margin: 0;
+
+ }
+.modal main header button {
+
+    background: none;
+    color: #ffffff;
+}
+.modal main header button:hover{
+    
+color: #bdbcbc;
+}
