@@ -176,8 +176,8 @@ justify-content: space-between;
     
 }
  .modal main {
-    width: 700px;
-    height: 500px;
+    width: 400px;
+    height: 550px;
     background: #F19E39;
     border-radius: 20px;
     padding: 20px;
@@ -185,6 +185,7 @@ justify-content: space-between;
  .modal main header{
     background: none;
     height: auto;
+    margin: 0 0 16px 20px;
  }
  .modal main h1{
     margin: 0;
@@ -198,4 +199,35 @@ justify-content: space-between;
 .modal main header button:hover{
     
 color: #bdbcbc;
+}
+.cardTickt {
+    width: 400px;
+    height: 200px;
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+
+.cardTickt header{
+    
+    background: none;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    height: auto;
+
+}
+.cardTickt header img{
+    width: 50px;
+    height: 50px;
+    margin: 8px 8px 8px 8px;
+}
+.cardTickt header h4, span{
+    margin: 0 0 0 10px;
+    color: #000000;
+}
+.cardTickt header span{
+    margin: 0 0 0 auto ;
+}
+.cardTickt main p span{
+        font-size: 40px;
 }
