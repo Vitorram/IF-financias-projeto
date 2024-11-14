@@ -1,52 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Document</title>
-            
-        </head>
-        <link rel="stylesheet" href="./projeto/css/style.css">
-        <body>
-            <header>
-                <div class="wrapper">
-                    <div id="logo">
-                        <a href="./HOME.html">
-                            <img src="./projeto/img/account_balance_36dp_F19E39_FILL0_wght400_GRAD0_opsz40.svg"alt="logo if finance">
-                            <h1>IF<spam>Finance</spam></h1>
-                        </a>
-                    </div>
-                    <nav>      
-                        <ul>
-                            <li><a class = "active" href="HOME.html">Home</a></li>
-                            <li><a href="./quemsomos.html">Quem somos</a></li>
-                            <li><a href="./bolsas.html">Bolsas</a></li>
-                            <li><a href="./destaques.html">Destaques</a></li>
-                            <li><a href="./contato.html">Contato</a></li>
-                        </ul>               
-                    </nav>
-                </div>               
-            </header> 
-        <main>   
-            <div class="wrapper">
-                <div class="flex-bt align-center"> 
-                <h1>HOME</h1>
-                <button style="width: 130px; height: 50px;" onclick="openModal()" > + ADICIONAR </button>
-                </div>
-            </div>      
-        </main>
-        <div class="modal" onclick="closeModal(event)"  >
-            <main>
-                <header class="flex-bt align-center" >
-                   <h1>Adicionar Ação</h1>
-                   <button style="width: 4px;" onclick="closeModal(event)"><h2>✖</h2></button>
-                </header>
-                <form>
-
-                </form>
-            </main>
-
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./projeto/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <div id="logo">
+                <a href="./HOME.html">
+                    <img src="./projeto/img/account_balance_36dp_F19E39_FILL0_wght400_GRAD0_opsz40.svg" alt="logo if finance">
+                    <h1>IF<spam>Finance</spam></h1>
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a class="active" href="HOME.html">Home</a></li>
+                    <li><a href="./quemsomos.html">Quem somos</a></li>
+                    <li><a href="./bolsas.html">Bolsas</a></li>
+                    <li><a href="./destaques.html">Destaques</a></li>
+                    <li><a href="./contato.html">Contato</a></li>
+                </ul>
+            </nav>
         </div>
-        </body>
-      <script src="./js/main.js"></script>
+    </header>
+    <main>
+        <div class="wrapper">
+            <div class="flex-bt align-center">
+                <h1>HOME</h1>
+                <button style="width: 130px; height: 50px;" onclick="openModal()">+ ADICIONAR</button>
+            </div>
+            <div id="cards-container"></div>
+        </div>
+    </main>
+    <div class="modal" onclick="closeModal(event)">
+        <main>
+            <header class="flex-bt align-center">
+                <h1>Adicionar Ação</h1>
+                <button style="width: 4px;" onclick="closeModal(event)"><h2>✖</h2></button>
+            </header>
+            <form>
+               
+            </form>
+        </main>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
 </html>
