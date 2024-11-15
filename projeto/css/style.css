@@ -231,3 +231,7 @@ color: #bdbcbc;
 .cardTickt main p span{
         font-size: 40px;
 }
+#cardList {
+    display: flex;
+    gap: 20px;
+}
