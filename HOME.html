@@ -29,52 +29,36 @@
     <main>
         <div class="wrapper">
             <div class="flex-bt align-center">
-                <h1>HOME</h1>
-                <button style="width: 130px; height: 50px;" onclick="openModal()">+ ADICIONAR</button>
+                <h1>Home</h1>
+                <button style="height: 40px;" onclick="openModal()">+ Adicionar</button>
             </div>
-            <div id="cardList">
-                <div class="cardTickt">
-                    <header>
-                        <img src="https://cdn-icons-png.flaticon.com/512/0/747.png" alt="Logo">
-                        <h4 style="font-size: 30px;">Aplle</h4>
-                        <span style="margin: 0 0 0 70px; font-size: 20px;">AAPL</span>
-                    </header>
-                    <main>
-                        <p style="color: black; margin: 10px 0 0 20px;">Valor: <span style="color: rgb(6, 170, 6);">150,00 </span> <span style="color: green;">▲<span style="color: red;">▼</span></p>
-                    </main>
-                    <footer style="display: flex;">
-                        <p style="color: black; margin: 20px 0 0 20px;font-size: 20px;" >Quantidade: <span style="color: #F19E39;"> 20 </span></p>
-                        <p  style="color: black;margin: 20px 0 0 20px; font-size: 20px;">Posiçao: <span style="color: #F19E39;" > R$ 23.400.23 </span></p>
-                    </footer>
-                </div>
+            <div id="card-list">
+                
             </div>
-            <div id="cards-container"></div>
         </div>
     </main>
     <div class="modal" onclick="closeModal(event)">
         <main>
             <header class="flex-bt align-center">
                 <h1>Adicionar Ação</h1>
-                <button style="width: 4px; margin: 0 10px 0 0;" onclick="closeModal()"><h2>✖</h2></button>
+                <button onclick="closeModal()">⨉</button>
             </header>
-             <form onsubmit="addTiker(event)"style=" margin: 0 10px 0 20px;">
-                       
-                        <label for = "urlLogo">URL logo</label>
-                        <input type="text" id="urlLogo" name = "urLogo">
-                        <label for = "nameCompany">Nome da empresa</label>
-                        <input type="text" id="nameCompany" name = "nameCompany">
-                        <label for = "nameCompany">Simbolo</label>
-                        <input type="text" id="simbolo" name = "simbolo">
-                        <label for = "valorFechamento">Qantidade</label>
-                        <input type="text" id="quantidade" name = "quantidade">
-                        <label for = "closedValue">Valor de açao</label>
-                        <input type="text" id="tickt" name = "tickt">
+            <form onsubmit="AddTicker(event)">
+                <label for="urlLogo">URL Logo:</label>
+                <input type="text" id="urlLogo" name="urlLogo">
+                <label for="nameCompany">Nome da Empresa:</label>
+                <input type="text" id="nameCompany" name="nameCompany">
+                <label for="ticker">Símbolo:</label>
+                <input type="text" id="ticker" name="ticker">
+                <label for="quantity">Quantidade:</label>
+                <input type="text" id="quantity" name="quantity">
+                <label for="closedValue">Valor da Ação:</label>
+                <input type="text" id="closedValue" name="closedValue">
 
-                        <input type="submit" value="adicionar" style="width: 50%; background-color: rgb(255, 255, 255);">
-              
-             </form>
+                <input type="submit" value="Adicionar" style="width: 50%;">
+            </form>
         </main>
     </div>
-    <script src="./js/main.js"></script>
 </body>
+<script src="./js/main.js"></script>
 </html>

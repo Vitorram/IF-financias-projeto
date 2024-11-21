@@ -164,74 +164,107 @@ justify-content: space-between;
     align-items: center;
 }
 .modal{
-    background: #f19e3952;
+    background: #1e1e1eaf;
     position: absolute;
-    top:0;
-    left: 0;
-    bottom: 0;
+    top: 0;
     right: 0;
+    bottom: 0;
+    left: 0;
     display: none;
     justify-content: center;
     align-items: center;
-    
 }
- .modal main {
-    width: 400px;
-    height: 550px;
-    background: #F19E39;
+
+.modal main{
+    background: #2d2d2d;
+    width: 500px;
+    height: 500px;
     border-radius: 20px;
     padding: 20px;
- }
- .modal main header{
+}
+.modal main header{
     background: none;
     height: auto;
-    margin: 0 0 16px 20px;
- }
- .modal main h1{
+    margin: 0 0 16px 0;
+}
+
+.modal main header h1{ 
     margin: 0;
-
- }
-.modal main header button {
-
-    background: none;
-    color: #ffffff;
 }
+
+.modal main header button{
+    width: 50px;
+    height: 50px;
+    background: none;
+    color: #FFF;
+}
+
 .modal main header button:hover{
-    
-color: #bdbcbc;
-}
-.cardTickt {
-    width: 400px;
-    height: 200px;
-    background-color: #ffffff;
-    border-radius: 20px;
+    background: #000;
 }
 
-.cardTickt header{
-    
-    background: none;
+.modal main form{
+    width: 100%;
+}
+
+.card-ticker{
+    width: 300px;
+    background: #2d2d2d;
+    border-radius: 16px;
+    padding: 14px;
+}
+
+.card-ticker header {
     display: flex;
     align-items: center;
     gap: 14px;
     height: auto;
+    background: none;
+}
 
+.card-ticker header img{
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
 }
-.cardTickt header img{
-    width: 50px;
-    height: 50px;
-    margin: 8px 8px 8px 8px;
+
+.card-ticker header h4{
+    margin: 0;
 }
-.cardTickt header h4, span{
-    margin: 0 0 0 10px;
-    color: #000000;
+
+.card-ticker header span{
+    margin: 0 0 0 auto;
 }
-.cardTickt header span{
-    margin: 0 0 0 auto ;
+
+.card-ticker main p {
+    color: #868686;
+    margin: 6px 0;
 }
-.cardTickt main p span{
-        font-size: 40px;
+
+.card-ticker main p span{
+    font-size: 40px;
 }
-#cardList {
+
+.card-ticker main p span span{
+    font-size: 20px;
+}
+
+.card-ticker footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-ticker footer p{
+    color: #868686;
+    margin: 6px 0 0 0;
+}
+
+.card-ticker footer p span{
+    color: #e5e5e5;
+    font-size: 18px;
+}
+
+#card-list{
     display: flex;
     gap: 20px;
 }

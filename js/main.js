@@ -16,34 +16,36 @@ function closeModal (event){
    
        
 }
-function addTiker(event){
-    
-    //previni o comportamento padrao
+function AddTicker(event){
+    //previne o comportamento padrão de recarregar a página ou enviar para algum endereço (action)
+    // ▼
     event.preventDefault()
-    //pega o valor do bagulho (urlLOGO)
-    const cardList = document.querySelector('#cardList')
+
+    const cardList = document.querySelector('#card-list')
+
+    // event.target (form)
     const urlLogo = event.target.urlLogo.value
-    const empresa = event.target.nameCompany.value
-    const simbolo = event.target.simbolo.value
-    const quantidade = event.target.qantidade.value
-    const tiket = event.target.tickt.value
+    const nameCompany = event.target.nameCompany.value
+    const ticker = event.target.ticker.value
+    const quantity = event.target.quantity.value
+    const closedValue = event.target.closedValue.value
 
-    constList.innerHTML += `<div id="cardList">
-    <div class="cardTickt">
-        <header>
-            <img src="${urlLogo}" alt="Logo">
-            <h4 style="font-size: 30px;">${empresa}</h4>
-            <span style="margin: 0 0 0 70px; font-size: 20px;">${simbolo}</span>
-        </header>
-        <main>
-            <p style="color: black; margin: 10px 0 0 20px;">Valor: <span style="color: rgb(6, 170, 6);">${tiket}</span> <span style="color: green;">▲<span style="color: red;">▼</span></p>
-        </main>
-        <footer style="display: flex;">
-            <p style="color: black; margin: 20px 0 0 20px;font-size: 20px;" >Quantidade: <span style="color: #F19E39;"> ${quantidade} </span></p>
-            <p  style="color: black;margin: 20px 0 0 20px; font-size: 20px;">Posiçao: <span style="color: #F19E39;" > R$ 23.400.23 </span></p>
-        </footer>
-    </div>`
-
+    cardList.innerHTML += `
+                    <div class="card-ticker">
+                        <header>
+                            <img src="${urlLogo}" alt="Logo">
+                            <h4>${nameCompany}</h4>
+                            <span>${ticker}</span>
+                        </header>
+                        <main>
+                            <p>Valor: <span style="color: #1ebd1e">${closedValue} <span>▲</span></span></p>
+                        </main>
+                        <footer>
+                            <p>Quantidade: <span>${quantity}</span></p>
+                            <p>Posição: <span>R$ ${+quantity * +closedValue}</span></p>
+                        </footer>
+                    </div>
+                `
     closeModal()
     event.target.reset()
 }
