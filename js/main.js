@@ -1,5 +1,5 @@
-function openModal(){
-    const modal = document.querySelector ('.modal')
+function openModal(id){
+    const modal = document.querySelector (id)
     modal.style.display = 'flex'
    
 }
@@ -45,8 +45,8 @@ function addTicker(event){
                             <p>Posição: <span>R$ ${+quantity * +closedValue}</span></p>
                         </footer>
                         <div class="options">
-                            <button style="width:80px;">Editar</button>
-                            <button style="width:80px;" >Excluir</button>
+                            <button style="width:80px;" onclick = "editCard (event)">Editar</button>
+                            <button style="width:80px;" onclick="removeCard(event)">Excluir</button>
                         </div>
                     </div>
                 `
@@ -62,4 +62,28 @@ function showCardOptions(event){
 function hideCardOptions(event){
     const cardOptions = event.target.querySelector('.options')
     cardOptions.style.display = 'none'
+}
+function removeCard (event){
+
+    //busca os acendentes do elemento (closest)
+const cardTiker = event.target.closest('.card-ticker')
+//.remove elimina o elemento do html
+cardTiker.remove()
+}
+
+function editCard (event){
+    const cardTiker = event.target.closest('.card-ticker')
+    
+    openModal ('#modaleditTicker')
+
+}
+
+function closemodal (event){
+    const fecharmodal = document.querySelector ('#modaleditTicker')
+    
+    
+    fecharmodal.style.display = 'none'
+
+   
+       
 }
