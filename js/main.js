@@ -31,7 +31,7 @@ function addTicker(event){
     const closedValue = event.target.closedValue.value
 
     cardList.innerHTML += `
-                    <div class="card-ticker" onmouseenter="showCardOptions(event)" onmouseleave="hideCardOptions(event)">
+                    <div class="card-ticker" id="${ticker}" onmouseenter="showCardOptions(event)" onmouseleave="hideCardOptions(event)">
                         <header>
                             <img src="${urlLogo}" alt="Logo">
                             <h4>${nameCompany}</h4>
@@ -73,10 +73,78 @@ cardTiker.remove()
 
 function editCard (event){
     const cardTiker = event.target.closest('.card-ticker')
+    const imglogo = cardTiker.querySelector('header img')
+    const urlLogo = imglogo.getAttribute('src')
+    document.querySelector('#eUrlLogo').value = urlLogo
+
+    const nameCompany = cardTiker.querySelector('header h4').innerText
+    document.querySelector('#eNameCompany').value = nameCompany
+
+    ///...
     
     openModal ('#modaleditTicker')
 
 }
+
+function updateTicker(event){
+    event.preventDefault()
+    
+    const cardList = document.querySelector('#card-list')
+
+
+    const urlLogo = event.target.urlLogo.value
+    const nameCompany = event.target.nameCompany.value
+    const ticker = event.target.ticker.value
+    const quantity = event.target.quantity.value
+    const closedValue = event.target.closedValue.value
+
+    const tikerData = {
+        urlLogo,
+        nameCompany,
+        ticker,
+        quantity,
+        closedValue
+        
+
+    }
+    addUpdateTiker(tikerData)
+}
+
+function addUpdateTiker (tikerData){
+    const ticker = document.querySelector('#${tikerData.ticker}')
+    console.log('addUpdateTiker')
+}
+if (ticker) {
+    console.log('Atualizar')
+} else {
+    console.log('editar')
+    cardList.innerHTML += `
+<div class="card-ticker" id="${tickerData.ticker}" onmouseenter="showCardOptions(event)" onmouseleave="hideCardOptions(event)">
+    <header>
+        <img src="${tickerData.ticker}" alt="Logo">
+        <h4>${tickerData.ticker}</h4>
+        <span>${tickerData.ticker}</span>
+    </header>
+    <main>
+        <p>Valor: <span style="color: #1ebd1e">${tickerData.ticker} <span>▲</span></span></p>
+    </main>
+    <footer>
+        <p>Quantidade: <span>${tickerData.ticker}</span></p>
+        <p>Posição: <span>R$ ${+tickerData.ticker * +tickerData.ticker}</span></p>
+    </footer>
+    <div class="options">
+        <button style="width:80px;" onclick = "editCard (event)">Editar</button>
+        <button style="width:80px;" onclick="removeCard(event)">Excluir</button>
+    </div>
+</div>
+`
+
+}
+
+
+
+
+
 
 function closemodal (event){
     const fecharmodal = document.querySelector ('#modaleditTicker')

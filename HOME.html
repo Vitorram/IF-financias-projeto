@@ -66,7 +66,7 @@
                 <h1>Editar Ação</h1>
                 <button onclick="closemodal(event)" id="fechar">⨉</button>
             </header>
-            <form onsubmit="editTicker(event)">
+            <form onsubmit="updateTicker(event)">
                 <label for="eUrlLogo">URL Logo:</label>
                 <input type="text" id="eUrlLogo" name="urlLogo">
                 <label for="eNameCompany">Nome da Empresa:</label>
@@ -78,7 +78,7 @@
                 <label for="eClosedValue">Valor da Ação:</label>
                 <input type="text" id="eClosedValue" name="closedValue">
 
-                <input type="submit" value="Adicionar" style="width: 50%;">
+                <input type="submit" value="Editar" style="width: 50%;">
             </form>
         </main>
     </div>
