@@ -11,6 +11,12 @@ body{
 header {
     height: 90px;
     background-color: black;
+        font-family: "Monomaniac One", serif;
+        font-weight: 400;
+        font-style: normal;
+      
+      
+      
 }
 .wrapper {
     width: 1000px;
